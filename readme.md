@@ -8,11 +8,16 @@ Later I plan to move to port this to chalice to see how it will run on a Lambda.
 
 
 ```
-virtualenv 
-pip install flask
-pip install iiif.py
-pip install pillow
-
-
+virtualenv flaskiiif
+$cd flaskiiif
+$source bin/activate
+$git clone https://github.com/davidschober/flaskiiif
+$pip install -r flaskiiif/requirements.txt
+$python flaskiiif/iiif.py
 ```
+
+put some images in your images folder
+
+http://localhost:5000/test/IMAGEID
+
 
