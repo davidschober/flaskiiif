@@ -7,10 +7,11 @@ PATH = os.path.dirname(os.path.realpath(__file__))
 # init flask based on this file
 app = Flask(__name__, static_url_path='')
 
-@app.route('/')
-def root():
+@app.route('/test/<identifier>')
+def root(identifier):
     """ This is a test page so you can see that it's working it displays using open seadragon"""
-    return render_template('home.html') 
+    context = {'identifier': identifier }
+    return render_template('home.html', context=context) 
 
 @app.route('/<identifier>/info.json')
 def info(identifier):
