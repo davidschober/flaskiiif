@@ -13,11 +13,16 @@ $cd flaskiiif
 $source bin/activate
 $git clone https://github.com/davidschober/flaskiiif
 $pip install -r flaskiiif/requirements.txt
-$python flaskiiif/iiif.py
+$python flaskiiif/app.py
 ```
 
 put some images in your images folder
 
 http://localhost:5000/test/IMAGEID
 
+
+## TODO
+
+* Port it to chalice
+* Add logging
 
